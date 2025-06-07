@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
+
+    <div class="container">
+        <img id="logo" src="{{ url_for('static', filename='logo.png') }}">
+    </div>
+
+    <div class="game"></div>
+        <button class="nav-toggle" onclick="toggleNav('Create')">☰ Create</button>
+
+        <button class="nav-toggle" onclick="toggleNav('Join')">☰ Join</button>
     
 </body>
 </html>

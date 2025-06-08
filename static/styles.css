@@ -34,16 +34,23 @@ nav a {
 
 .nav-toggle {
     background-color: #6a7e9c;
-    border: none;
-    padding: 10px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: incline-block;
+    flex-direction: row;
+    gap: 10px;  
+    padding: 20px 60px;
     border-radius: 10px;
+    border: none;
     font-size: 16px;
-    align-items: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
     color: #000;
     font-family:Arial, Helvetica, sans-serif
 }
+
 
 .nav-toggle:hover {
     background-color: #596f91;

@@ -4,7 +4,9 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0;
-  background: #c5c5c5;
+  background: #000000;
+  overflow: hidden;
+  position: relative;
   color: #868686;
 }
 
@@ -30,14 +32,15 @@ nav a {
     margin: 20px 0 20px 20px;
 }
 
-/* Buttons Style */
+/* Buttons */
 
 .nav-toggle {
     background-color: #6a7e9c;
-    padding: 20px 60px;
+    padding: 45px 85px;
     border-radius: 10px;
     border: none;
-    font-size: 16px;
+    font-size: 50px;
+    min-width: 120px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     color: #000;
@@ -46,17 +49,45 @@ nav a {
 
 .button-container {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     gap: 10px;
-    align-items: ce
 }
-
 
 .nav-toggle:hover {
     background-color: #596f91;
 }
 
+/* Background Brush Animation */
 
+#splash-container {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 30px);
+  grid-auto-rows: 30px;
+  justify-content: center;
+  width: 200vw;
+  height: 200vh;
+}
+
+.splash {
+  width: 200px;
+  height: 200px;
+  background-image: url('/static/images/paint-splash.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  animation: fall 6s linear infinite;
+  filter: drop-shadow(0 0 4px hsl(120, 100%, 75%));
+}
+
+@keyframes fall {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(110vh); }
+}
